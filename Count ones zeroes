@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> num={0,1,2,1,0,2,2,1,0,1,1};
+    int n=num.size();
+    int zeroescount=0;
+    int onescount=0;
+    int twoscount=0;
+    for(int index=0;index<n;index++)
+    {
+        if(num[index]==0)
+        {
+            zeroescount++;
+        }
+        else if(num[index]==1)
+        {
+            onescount++;
+        }
+        else
+        {
+            twoscount++;
+        }
+    }
+    cout<<"zeroes : "<<zeroescount<<endl;
+    cout<<"ones : "<<onescount<<endl;
+    cout<<"twos : "<<twoscount<<endl;
+    return 0;
+}
