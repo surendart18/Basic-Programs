@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> num={1,2,3,4,5,6,7,8};
+    int n=num.size();
+    int sum_odd=0;
+    int sum_even=0;
+    for(int i=0;i<n;i++)
+    {
+        if(i%2!=0)
+        {
+            sum_odd=num[i]+sum_odd;
+        }
+        else
+        {
+            sum_even=num[i]+sum_even;
+        }
+    }
+    cout<<"odd index sum : "<<sum_odd<<endl;
+    cout<<"even index sum : "<<sum_even;
+    return 0;
+}
