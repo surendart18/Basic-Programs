@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    vector<int> val={1,2,3,4,5,6,7};
+    for(int index=0;index<7;index++)
+    {
+        if(val[index]%2!=0)
+        {
+            cout<<val[index]<<" ";
+        }
+    }
+    return 0;
+}
