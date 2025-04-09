@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    int num_check;
+    cin>>num_check;
+    vector<int> num={1,3,6,9,3,7};
+    int n=num.size();
+    int flag=0;
+    for(int i=0;i<n;i++)
+    {
+        if(num[i]==num_check)
+        {
+           flag=1;
+           break; 
+        }
+    }
+    if(flag==1)
+    {
+        cout<<"true";
+    }
+    else
+    {
+        cout<<"false";
+    }
+    return 0;
+}
