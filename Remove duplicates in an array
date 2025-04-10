@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> num={1,2,6,4,9,3,5,3,3};
+    int n=num.size();
+    sort(num.begin(),num.end());
+    int i=0;
+    for(int j=1;j<n;j++)
+    {
+       if(num[i]!=num[j])
+       {
+           i++;
+           num[i]=num[j];
+       }
+    }
+    for(int j=0;j<=i;j++)
+    {
+        cout<<num[j]<<" "; 
+    }
+    return 0;
+}
