@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> num={1,4,7,2,4,3,3,9,3};
+    int n=num.size();
+    sort(num.begin(),num.end(),greater<int>());
+    for(int i=0;i<n;i++)
+    {
+        cout<<num[i];
+    }
+    return 0;
+}
