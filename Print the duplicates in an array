@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> num={1,4,2,5,3,6,3,2,7,6};
+    int n=num.size();
+    unordered_map<int,int> map;
+    for(int nums:num)
+    {
+        map[nums]++;
+    }
+    for(auto pair:map)
+    {
+        // cout<<pair.first<<" : "<<pair.second<<endl;
+        if(pair.second>1)
+        {
+            cout<<pair.first<<" ";
+        }
+    }
+    return 0;
+}
