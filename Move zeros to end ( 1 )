@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> num={1,5,0,2,8,0,0,3,6,0,4};
+    int n=num.size();
+    vector<int> temp;
+    int count=0;
+    for(int i=0;i<n;i++)
+    {
+        if(num[i]==0)
+        {
+            count++;
+        }
+        else
+        {
+            temp.push_back(num[i]);
+        }
+    }
+    for(int i=0;i<count;i++)
+    {
+        temp.push_back(0);
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<<temp[i]<<" ";
+    }
+    return 0;
+}
