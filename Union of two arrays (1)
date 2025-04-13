@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> num1={1,3,2,5,7,5};
+    vector<int> num2={1,5,9,8,6,2,4,6};
+    int n=num1.size();
+    int m=num2.size();
+    map<int,int> freq;
+    for(int i=0;i<n;i++)
+    {
+        freq[num1[i]]++;
+    }
+    for(int i=0;i<m;i++)
+    {
+        freq[num2[i]]++;
+    }
+    for(auto mapping :freq)
+    {
+        cout<<mapping.first<<" ";
+    }
+    
+    return 0;
+    
+}
