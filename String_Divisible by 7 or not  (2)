@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool isDivisible(int num)
+{
+    if(num<0)
+    {
+        num=-num;
+    }
+    while(num>=7)
+    {
+        num-=7;
+    }
+    return num==0;
+}
+int main()
+{
+    int num;
+    cin>>num;
+    if(isDivisible(num))
+    {
+        cout<<"Divisible by 7";
+    }
+    else
+    {
+        cout<<"Not Divisible by 7";
+    }
+    return 0;
+}
