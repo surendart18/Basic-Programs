@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int flag=0;
+    for(int i=0;i<s.size();i++)
+    {
+        int openCount=0,closeCount=0;
+        for(int j=0;j<i;j++)
+        {
+            if(s[j]=='(')
+            {
+                openCount++;
+            }
+        }
+        for(int j=i;j<s.size();j++)
+        {
+            if(s[j]==')')
+            {
+                closeCount++;
+            }
+        }
+        if(openCount==closeCount)
+        {
+            cout<<i;
+            flag=1;
+        }
+    }
+    if(flag==0)
+    {
+        cout<<-1;
+    }
+    return 0;
+}
