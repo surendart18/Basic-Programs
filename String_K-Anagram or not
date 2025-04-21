@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s1,s2;
+    cin>>s1;
+    cin>>s2;
+    int k;
+    cin>>k;
+    int flag=0;
+    if(s1.size()!=s2.size())
+    {
+        flag=1;
+    }
+    else
+    {
+        unordered_map<char,int> map;
+        for(int i=0;i<s1.size();i++)
+        {
+            char ch=s1[i];
+            map[ch]++;
+        }
+        for(int i=0;i<s2.size();i++)
+        {
+            char ch=s2[i];
+            if(map[ch]>0)
+            {
+                map[ch]--;
+            }
+        }
+        int count=0;
+        for(auto i=map.begin();i!=map.end();i++)
+        {
+            count+=i->second;
+        }
+        if(count>k)
+        {
+            flag=1;
+        }
+    }
+    if(flag==1)
+    {
+        cout<<"Not K-anagram";
+    }
+    else
+    {
+        cout<<"K-anagram";
+    }
+    return 0;
+}
+
