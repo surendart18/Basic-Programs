@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    string s;
+    cout<<"Enter the string"<<endl;
+    getline(cin,s);
+    s+=' ';
+    string LargestString="",CurrString="";
+    int n=s.size();
+    for(int i=0;i<n;i++)
+    {
+        if(s[i]==' ')
+        {
+            if(LargestString.size()==0)  //1. LargestString empty 
+            {    
+                LargestString=CurrString;
+            }
+            else if(CurrString.size()>LargestString.size())   // 2. Check the curr string if it exceeds largest one 
+            {
+                LargestString=CurrString;
+            }
+            CurrString="";
+        }
+        else
+        {
+            CurrString+=s[i];
+        }
+    }
+    int K=LargestString.size();
+    for(int i=K-1;i>=0;i--)
+    {
+       cout<<LargestString[i];
+    }
+    return 0;
+}
