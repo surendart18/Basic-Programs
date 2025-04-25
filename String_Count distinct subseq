@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+void generateSubseq(int i, string &curr, string &str, unordered_set<string> &st)
+{
+    int n=str.size();
+    if(i==n)
+    {
+        st.insert(curr);
+        return;
+    }
+    generateSubseq(i+1,curr,str,st);
+    curr.push_back(str[i]);
+    generateSubseq(i+1,curr,str,st);
+    curr.pop_back();
+}
+int distinctSubseq(string &str)
+{
+    unordered_set<string> st;
+    string curr;
+    generateSubseq(0,curr,str,st);
+    return st.size();
+}
+int main()
+{
+    string str;
+    cin>>str;
+    cout<<distinctSubseq(str);
+    return 0;
+}
