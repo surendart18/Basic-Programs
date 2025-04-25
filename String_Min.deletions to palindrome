@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int i=0;
+    int j=s.size()-1;
+    int count=0;
+    while(i<j)
+    {
+        if(s[i]==s[j])
+        {
+            i++;
+            j--;
+        }
+        else
+        {
+            count++;
+            if(s[i+1]==s[j])
+            {
+                i++;
+            }
+            else if(s[i]==s[j-1])
+            {
+                j--;
+            }
+            else
+            {
+                i++;
+                j--;
+            }
+        }
+    }
+    cout<<count;
+    return 0;
+}
