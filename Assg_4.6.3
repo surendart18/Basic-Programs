@@ -1,0 +1,25 @@
+// Assg: 4.6.3
+//  55555
+//  4444
+//  333
+//  22
+//  1 
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int temp=5;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=n;j>=i;j--)
+        {
+            cout<<temp<<" ";
+        }
+        temp--;
+        cout<<endl;
+    }
+    return 0;
+}
